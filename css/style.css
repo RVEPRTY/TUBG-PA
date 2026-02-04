@@ -1,0 +1,144 @@
+:root {
+  --black: #0b0b0b;
+  --black-soft: #141414;
+  --gold: #d4af37;
+  --gold-soft: #b8962e;
+  --text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #141414, #000);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+header h2 {
+  margin: 10px 0 0;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* ---------- COUNTDOWN ---------- */
+#countdown {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  color: var(--gold-soft);
+}
+
+/* ---------- GRID ---------- */
+.vote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ---------- VOTE CARD ---------- */
+.vote-card {
+  height: 340px;
+  background: var(--black-soft);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vote-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25);
+}
+
+/* 80% image */
+.card-image {
+  height: 80%;
+  width: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 20% text */
+.card-text {
+  height: 20%;
+  background: linear-gradient(180deg, #111, #000);
+  text-align: center;
+  padding: 12px;
+}
+
+.card-text h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--gold);
+}
+
+.card-text p {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* ---------- RECEIPT ---------- */
+.receipt {
+  max-width: 520px;
+  margin: 80px auto;
+  padding: 36px;
+  background: linear-gradient(180deg, #111, #000);
+  border-radius: 18px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  text-align: center;
+}
+
+.receipt h1 {
+  color: var(--gold);
+}
+
+.receipt h2 {
+  margin: 16px 0;
+  padding: 12px;
+  background: #111;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+.receipt .note {
+  margin-top: 18px;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.receipt .time {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
